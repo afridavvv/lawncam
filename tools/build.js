@@ -7,7 +7,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.resolve(process.argv[2] || "_site");
-const SITE = "https://lawncammw.com";
+const SITE = "https://www.lawncammw.com";
 
 const ctx = { window: {} };
 vm.createContext(ctx);
