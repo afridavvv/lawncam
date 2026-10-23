@@ -17,7 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download photos
-        run: python3 tools/fetch_photos.py
+        run: |
+          pip install --quiet pillow
+          python3 tools/fetch_photos.py
       - name: Commit changes
         run: |
           git add assets/photos

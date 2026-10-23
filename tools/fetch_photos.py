@@ -55,6 +55,20 @@ def info(file, width):
     }
 
 
+def shrink(path, width):
+    """Commons sometimes serves a bigger file than asked for; cap the width and recompress (needs Pillow)."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return
+    im = Image.open(path)
+    if im.width <= width:
+        return
+    im = im.convert("RGB")
+    im.thumbnail((width, width * 10), Image.LANCZOS)
+    im.save(path, "JPEG", quality=82, optimize=True, progressive=True)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     manifest, failed = {}, []
@@ -65,8 +79,10 @@ def main():
                 raise RuntimeError("not found on Commons")
             ext = os.path.splitext(urllib.parse.urlparse(meta["url"]).path)[1].lower() or ".jpg"
             name = re.sub(r"[^A-Za-z0-9._-]", "_", os.path.splitext(file)[0]) + ext
-            with open(os.path.join(OUT, name), "wb") as f:
+            path = os.path.join(OUT, name)
+            with open(path, "wb") as f:
                 f.write(get(meta["url"]))
+            shrink(path, WIDE.get(file, 900))
             manifest[file] = {"src": "/assets/photos/" + name, **{k: meta[k] for k in ("author", "license", "licenseUrl", "page")}}
             print(f"ok   {file}  [{meta['license']}] {meta['author']}")
         except Exception as e:  # keep going; the site falls back to the Commons URL
