@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo credits | LAWNCAM</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar"><div class="wrap topbar-inner"><a class="brand" href="./"><img src="assets/favicon.svg" alt="" width="32" height="32"><span>LAWNCAM</span></a></div></header>
+  <main class="section">
+    <div class="wrap">
+      <h2>Photo credits</h2>
+      <p class="sub">Photographs on this website come from Wikimedia Commons and are used under the free licences stated on each file page (for example Creative Commons Attribution / Attribution-ShareAlike). The author and exact licence of each photo are listed on its Commons page linked below.</p>
+      <ul id="credits"></ul>
+    </div>
+  </main>
+  <script src="assets/photos/manifest.js"></script>
+  <script src="assets/species.js"></script>
+  <script>
+    var ul = document.getElementById("credits");
+    var items = LAWNCAM_SPECIES.map(function (s) { return [s.trade + " (" + s.name + ")", s.photo]; });
+    items.push(["Lake Malawi cichlids (header)", LAWNCAM_PHOTOS.hero], ["Canoes on Lake Malawi", LAWNCAM_PHOTOS.canoes]);
+    items.forEach(function (it) {
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.href = commonsPage(it[1]); a.textContent = "File:" + it[1].replace(/_/g, " "); a.rel = "noopener";
+      var info = (window.LAWNCAM_LOCAL_PHOTOS || {})[it[1]];
+      li.append(it[0] + ": ", a);
+      if (info) {
+        li.append(" by " + (info.author || "unknown") + ", ");
+        var lic = document.createElement(info.licenseUrl ? "a" : "span");
+        if (info.licenseUrl) { lic.href = info.licenseUrl; lic.rel = "noopener license"; }
+        lic.textContent = info.license || "see file page";
+        li.append(lic);
+      }
+      li.append(" (Wikimedia Commons)");
+      ul.appendChild(li);
+    });
+  </script>
+</body>
+</html>

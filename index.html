@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAWNCAM | Lake Malawi Ornamental Fish Exporter</title>
+  <meta name="description" data-i18n-attr="content:meta_desc" content="LAWNCAM collects and exports Lake Malawi ornamental cichlids to aquarium importers and wholesalers worldwide.">
+  <link rel="alternate" hreflang="en" href="?lang=en">
+  <link rel="alternate" hreflang="zh" href="?lang=zh">
+  <link rel="alternate" hreflang="fr" href="?lang=fr">
+  <link rel="alternate" hreflang="pt" href="?lang=pt">
+  <link rel="alternate" hreflang="es" href="?lang=es">
+  <link rel="alternate" hreflang="de" href="?lang=de">
+  <link rel="alternate" hreflang="ru" href="?lang=ru">
+  <link rel="alternate" hreflang="ar" href="?lang=ar">
+  <link rel="alternate" hreflang="x-default" href="./">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="32" height="32"><span>LAWNCAM</span></a>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#fish" data-i18n="nav_fish">Our Fish</a>
+        <a href="#export" data-i18n="nav_export">How We Export</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#order" class="btn btn-small" data-i18n="nav_order">Place an Order</a>
+        <select id="lang" aria-label="Language"></select>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" id="hero-bg"></div>
+      <div class="wrap hero-content">
+        <p class="kicker" data-i18n="hero_kicker">Malawi · Ornamental Fish Exporter</p>
+        <h1 data-i18n="hero_title">Living colour from Lake Malawi</h1>
+        <p class="lead" data-i18n="hero_sub"></p>
+        <div class="hero-actions">
+          <a href="#order" class="btn" data-i18n="hero_cta">Place an order</a>
+          <a href="#fish" class="btn btn-ghost" data-i18n="hero_cta2">View our fish</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="wrap about">
+        <div>
+          <h2 data-i18n="about_title">About LAWNCAM</h2>
+          <p data-i18n="about_p1"></p>
+          <p data-i18n="about_p2"></p>
+        </div>
+        <figure class="about-photo"><img id="about-img" alt="Lake Malawi" loading="lazy"></figure>
+      </div>
+      <div class="wrap features">
+        <div class="feature"><span class="ico">✋</span><h3 data-i18n="feat1_t"></h3><p data-i18n="feat1_d"></p></div>
+        <div class="feature"><span class="ico">💧</span><h3 data-i18n="feat2_t"></h3><p data-i18n="feat2_d"></p></div>
+        <div class="feature"><span class="ico">✈️</span><h3 data-i18n="feat3_t"></h3><p data-i18n="feat3_d"></p></div>
+        <div class="feature"><span class="ico">📄</span><h3 data-i18n="feat4_t"></h3><p data-i18n="feat4_d"></p></div>
+      </div>
+    </section>
+
+    <section id="fish" class="section alt">
+      <div class="wrap">
+        <h2 data-i18n="fish_title">Our Fish</h2>
+        <p class="sub" data-i18n="fish_sub"></p>
+        <div class="filters" role="tablist">
+          <button data-filter="all" class="active" data-i18n="filter_all">All</button>
+          <button data-filter="mbuna" data-i18n="filter_mbuna">Mbuna</button>
+          <button data-filter="peacock" data-i18n="filter_peacock">Peacocks</button>
+          <button data-filter="hap" data-i18n="filter_hap">Haplochromines</button>
+        </div>
+        <div class="grid" id="fish-grid"></div>
+      </div>
+    </section>
+
+    <section id="export" class="section">
+      <div class="wrap">
+        <h2 data-i18n="export_title">How We Export</h2>
+        <ol class="steps">
+          <li><h3 data-i18n="step1_t"></h3><p data-i18n="step1_d"></p></li>
+          <li><h3 data-i18n="step2_t"></h3><p data-i18n="step2_d"></p></li>
+          <li><h3 data-i18n="step3_t"></h3><p data-i18n="step3_d"></p></li>
+          <li><h3 data-i18n="step4_t"></h3><p data-i18n="step4_d"></p></li>
+        </ol>
+        <p class="note" data-i18n="export_note"></p>
+      </div>
+    </section>
+
+    <section id="order" class="section alt">
+      <div class="wrap">
+        <h2 data-i18n="order_title">Place an Order</h2>
+        <p class="sub" data-i18n="order_sub"></p>
+
+        <form id="order-form" novalidate>
+          <div class="card">
+            <h3 data-i18n="cart_title">Your order list</h3>
+            <p class="empty" id="cart-empty" data-i18n="cart_empty"></p>
+            <table class="cart" id="cart-table" hidden>
+              <thead><tr><th data-i18n="col_species"></th><th data-i18n="col_size"></th><th data-i18n="col_qty"></th><th></th></tr></thead>
+              <tbody id="cart-body"></tbody>
+            </table>
+            <div class="add-row">
+              <select id="add-species"></select>
+              <input id="add-other" type="text" data-i18n-attr="placeholder:other_species" hidden>
+              <button type="button" class="btn btn-small" id="add-btn" data-i18n="add">Add</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="details_title">Your details</h3>
+            <div class="fields">
+              <label><span><span data-i18n="f_company"></span> *</span><input name="company" required autocomplete="organization"></label>
+              <label><span><span data-i18n="f_name"></span> *</span><input name="name" required autocomplete="name"></label>
+              <label><span><span data-i18n="f_email"></span> *</span><input name="email" type="email" required autocomplete="email"></label>
+              <label><span data-i18n="f_phone"></span><input name="phone" type="tel" autocomplete="tel"></label>
+              <label><span><span data-i18n="f_country"></span> *</span><input name="country" required autocomplete="country-name"></label>
+              <label><span><span data-i18n="f_airport"></span> *</span><input name="airport" required></label>
+              <label><span data-i18n="f_date"></span><input name="date" type="date"></label>
+              <label class="full"><span data-i18n="f_notes"></span><textarea name="notes" rows="3"></textarea></label>
+              <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="form-msg" id="form-msg" role="status"></p>
+            <button type="submit" class="btn" id="submit-btn" data-i18n="submit">Send order request</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap">
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p class="sub" data-i18n="contact_sub"></p>
+        <dl class="contact" id="contact-list"></dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> LAWNCAM. <span data-i18n="footer_rights"></span></span>
+      <a href="credits.html" data-i18n="footer_credits">Photo credits</a>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="assets/i18n.js"></script>
+  <script src="assets/photos/manifest.js"></script>
+  <script src="assets/species.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
