@@ -53,13 +53,8 @@ function seoHead(code, t) {
   ].join("\n");
 }
 
-function fishCards(t) {
-  return SPECIES.map((s) =>
-    `<article class="fish"><img src="${esc(photo(s.photo, 640))}" alt="${esc(s.trade + " (" + s.name + ")")}" loading="lazy">` +
-    `<div class="fish-body"><h3>${esc(s.trade)}</h3><p class="sci">${esc(s.name)}</p>` +
-    `<p class="meta">${esc(t.adult_size + ": " + s.size)}</p></div></article>`
-  ).join("\n");
-}
+const fishCards = (t) => SPECIES.map((s) => ctx.window.fishCardHTML(s, t, false)).join("\n");
+const marquee = () => { const h = SPECIES.map((s) => `<span><i>${esc(s.name)}</i></span>`).join(""); return h + h; };
 
 function render(code) {
   const t = Object.assign({}, I18N.en, I18N[code]);
@@ -74,7 +69,11 @@ function render(code) {
     const cleaned = tagText.replace(new RegExp(`\\s${attr}="[^"]*"`), "");
     return cleaned.replace(/\s*\/?>$/, (end) => ` ${attr}="${esc(t[key] || "")}"${end}`);
   });
-  html = html.replace('<img id="about-img" alt="Lake Malawi"', `<img id="about-img" src="${esc(photo(ctx.window.LAWNCAM_PHOTOS.canoes, 900))}" alt="Canoes on Lake Malawi"`);
+  // photos referenced as data-photo="<Commons file>" get their local (or Commons) URL
+  html = html.replace(/<img([^>]*?) data-photo="([^"]+)"(?: data-width="(\d+)")?/g, (m, before, file, w) => `<img${before} data-photo="${file}" src="${esc(photo(file, +w || 900))}"`);
+  html = html.replace('<div class="marquee-track" id="marquee"></div>', `<div class="marquee-track" id="marquee">${marquee()}</div>`);
+  if (CFG.email) html = html.replace('<a id="footer-email" dir="ltr" href="#contact"></a>', `<a id="footer-email" dir="ltr" href="mailto:${esc(CFG.email)}">${esc(CFG.email)}</a>`);
+  html = html.replace('<span id="footer-address"></span>', `<span id="footer-address">${esc(CFG.address || "")}</span>`);
   html = html.replace('<div class="grid" id="fish-grid"></div>', `<div class="grid" id="fish-grid">\n${fishCards(t)}\n</div>`);
   const dir = code === "en" ? OUT : path.join(OUT, code);
   fs.mkdirSync(dir, { recursive: true });

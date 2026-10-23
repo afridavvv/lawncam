@@ -5,106 +5,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="title">LAWNCAM | Lake Malawi Cichlids Exporter – Wholesale Ornamental Fish from Malawi</title>
   <meta name="description" data-i18n-attr="content:meta_desc" content="">
+  <meta name="theme-color" content="#0a1f2e">
   <!--SEO-->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/assets/style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <header class="topbar">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd25a"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
+    </defs>
+    <symbol id="logo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0e3a52"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#19a7b8" stroke-opacity=".5"/><path d="M8 25c4.5-7.5 14-11 23-7.4l7.2-5.4-1.9 10.1 1.9 10.1-7.2-5.4C22 30.6 12.5 32.4 8 25z" fill="url(#g-sun)"/><path d="M17 17.6c3-3.6 8-5 12-3.2l-2 3.4M19.5 19.2v11.6M24 18.2v13.4M28.5 19v11.8" stroke="#0a1f2e" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="13" cy="23.4" r="1.7" fill="#0a1f2e"/></symbol>
+    <symbol id="i-fish" viewBox="0 0 24 24"><path d="M7 12c2.4-3.9 5.8-5.5 8.8-5.5 2.9 0 5 2.4 6.2 5.5-1.2 3.1-3.3 5.5-6.2 5.5-3 0-6.4-1.6-8.8-5.5z"/><path d="M7 12 2.5 8v8L7 12z"/><path d="M13 8.5c-.8 2.3-.8 4.7 0 7"/><circle cx="18" cy="11.2" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c4 5 6.5 8.3 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 11.3 8 8 12 3z"/><path d="M9 15a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21.5 2.5 10.5 13.5M21.5 2.5l-7 19-4-8-8-4 19-7z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8.5l4.5 4.5v14.5H6z"/><path d="M14 2.5V7h5M9 12h7M9 15.5h7M9 19h4"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><rect x="3" y="3.5" width="18" height="17" rx="2.5"/><path d="M7 8.5h10M7 12.5h6M14.5 16.5h2.5"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6.5L21 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-12.3 7.6L3.5 21l1.4-4.5A8.5 8.5 0 1 1 20.5 12z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-6.3-7-11.5a7 7 0 0 1 14 0c0 5.2-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c3.2 3 3.2 16 0 19M12 2.5c-3.2 3-3.2 16 0 19"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 16.5 16.5 3 21 7.5 7.5 21z"/><path d="M7 12.5l2 2M10 9.5l2 2M13 6.5l2 2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></symbol>
+  </svg>
+
+  <header class="topbar" id="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#top"><img src="/assets/favicon.svg" alt="" width="32" height="32"><span>LAWNCAM</span></a>
-      <button class="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
-      <nav class="nav">
+      <a class="brand" href="#top" aria-label="LAWNCAM">
+        <svg class="logo" aria-hidden="true"><use href="#logo"></use></svg>
+        <span class="brand-text"><b>LAWNCAM</b><small>Lake Malawi Cichlids</small></span>
+      </a>
+      <nav class="nav" id="nav">
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#fish" data-i18n="nav_fish">Our Fish</a>
         <a href="#export" data-i18n="nav_export">How We Export</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
-        <a href="#order" class="btn btn-small" data-i18n="nav_order">Place an Order</a>
-        <select id="lang" aria-label="Language"></select>
+        <a href="#order" class="btn btn-primary btn-small" data-i18n="nav_order">Place an Order</a>
       </nav>
+      <label class="lang">
+        <svg class="ico" aria-hidden="true"><use href="#i-globe"></use></svg>
+        <select id="lang" aria-label="Language"></select>
+      </label>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg class="ico" aria-hidden="true"><use href="#i-menu"></use></svg></button>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-bg" id="hero-bg"></div>
-      <div class="wrap hero-content">
-        <p class="kicker" data-i18n="hero_kicker">Malawi · Ornamental Fish Exporter</p>
-        <h1 data-i18n="hero_title">Living colour from Lake Malawi</h1>
-        <p class="lead" data-i18n="hero_sub"></p>
-        <div class="hero-actions">
-          <a href="#order" class="btn" data-i18n="hero_cta">Place an order</a>
-          <a href="#fish" class="btn btn-ghost" data-i18n="hero_cta2">View our fish</a>
+      <img class="hero-img" data-photo="Cichlids-of-Lake-Malawi.jpg" data-width="1600" alt="" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="pill"><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg><span data-i18n="hero_kicker">Malawi · Ornamental Fish Exporter</span></p>
+          <h1 data-i18n="hero_title">Living colour from Lake Malawi</h1>
+          <p class="lead" data-i18n="hero_sub"></p>
+          <div class="hero-actions">
+            <a href="#order" class="btn btn-primary"><span data-i18n="hero_cta">Place an order</span><svg class="ico flip" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+            <a href="#fish" class="btn btn-ghost" data-i18n="hero_cta2">View our fish</a>
+          </div>
+          <ul class="trust">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-fish"></use></svg><span data-i18n="feat1_t"></span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-plane"></use></svg><span data-i18n="feat3_t"></span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><span data-i18n="feat4_t"></span></li>
+          </ul>
+        </div>
+        <div class="hero-cards" aria-hidden="true">
+          <figure class="spec spec-a">
+            <img data-photo="Aulonocara_jacobfreibergi_eureka_red.jpg" alt="">
+            <figcaption><b>Peacock ‘Eureka Red’</b><i>Aulonocara jacobfreibergi</i></figcaption>
+          </figure>
+          <figure class="spec spec-b">
+            <img data-photo="Pseudotropheus_demasoni.jpg" alt="">
+            <figcaption><b>Demasoni</b><i>Pseudotropheus demasoni</i></figcaption>
+          </figure>
         </div>
       </div>
+      <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50C180 85 360 90 560 62S940 0 1140 18 1360 70 1440 60V90H0z"/></svg>
     </section>
+
+    <div class="marquee" aria-hidden="true" dir="ltr"><div class="marquee-track" id="marquee"></div></div>
 
     <section id="about" class="section">
       <div class="wrap about">
-        <div>
+        <div class="about-media reveal">
+          <img class="about-main" data-photo="Canoes_on_Lake_Malawi.jpg" alt="Canoes on Lake Malawi" loading="lazy">
+          <img class="about-inset" data-photo="Fryeri6.jpg" alt="Electric Blue Hap (Sciaenochromis fryeri)" loading="lazy">
+          <span class="about-badge"><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg><span data-i18n="origin">Wild-collected in Lake Malawi</span></span>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow" data-i18n="eb_about">Who we are</p>
           <h2 data-i18n="about_title">About LAWNCAM</h2>
-          <p data-i18n="about_p1"></p>
+          <p class="big" data-i18n="about_p1"></p>
           <p data-i18n="about_p2"></p>
         </div>
-        <figure class="about-photo"><img id="about-img" alt="Lake Malawi" loading="lazy"></figure>
       </div>
       <div class="wrap features">
-        <div class="feature"><span class="ico">✋</span><h3 data-i18n="feat1_t"></h3><p data-i18n="feat1_d"></p></div>
-        <div class="feature"><span class="ico">💧</span><h3 data-i18n="feat2_t"></h3><p data-i18n="feat2_d"></p></div>
-        <div class="feature"><span class="ico">✈️</span><h3 data-i18n="feat3_t"></h3><p data-i18n="feat3_d"></p></div>
-        <div class="feature"><span class="ico">📄</span><h3 data-i18n="feat4_t"></h3><p data-i18n="feat4_d"></p></div>
+        <div class="feature reveal"><span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-fish"></use></svg></span><h3 data-i18n="feat1_t"></h3><p data-i18n="feat1_d"></p></div>
+        <div class="feature reveal"><span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-drop"></use></svg></span><h3 data-i18n="feat2_t"></h3><p data-i18n="feat2_d"></p></div>
+        <div class="feature reveal"><span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-plane"></use></svg></span><h3 data-i18n="feat3_t"></h3><p data-i18n="feat3_d"></p></div>
+        <div class="feature reveal"><span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg></span><h3 data-i18n="feat4_t"></h3><p data-i18n="feat4_d"></p></div>
       </div>
     </section>
 
-    <section id="fish" class="section alt">
+    <section id="fish" class="section sand">
       <div class="wrap">
-        <h2 data-i18n="fish_title">Our Fish</h2>
-        <p class="sub" data-i18n="fish_sub"></p>
-        <div class="filters" role="tablist">
-          <button data-filter="all" class="active" data-i18n="filter_all">All</button>
-          <button data-filter="mbuna" data-i18n="filter_mbuna">Mbuna</button>
-          <button data-filter="peacock" data-i18n="filter_peacock">Peacocks</button>
-          <button data-filter="hap" data-i18n="filter_hap">Haplochromines</button>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="eb_fish">Catalogue</p>
+            <h2 data-i18n="fish_title">Our Fish</h2>
+            <p class="sub" data-i18n="fish_sub"></p>
+          </div>
+          <div class="filters" role="group">
+            <button type="button" data-filter="all" class="active" data-i18n="filter_all">All</button>
+            <button type="button" data-filter="mbuna" data-i18n="filter_mbuna">Mbuna</button>
+            <button type="button" data-filter="peacock" data-i18n="filter_peacock">Peacocks</button>
+            <button type="button" data-filter="hap" data-i18n="filter_hap">Haplochromines</button>
+          </div>
         </div>
         <div class="grid" id="fish-grid"></div>
       </div>
     </section>
 
-    <section id="export" class="section">
+    <section id="export" class="section deep">
       <div class="wrap">
-        <h2 data-i18n="export_title">How We Export</h2>
+        <div class="section-head center">
+          <div>
+            <p class="eyebrow" data-i18n="eb_export">Process</p>
+            <h2 data-i18n="export_title">How We Export</h2>
+          </div>
+        </div>
         <ol class="steps">
-          <li><h3 data-i18n="step1_t"></h3><p data-i18n="step1_d"></p></li>
-          <li><h3 data-i18n="step2_t"></h3><p data-i18n="step2_d"></p></li>
-          <li><h3 data-i18n="step3_t"></h3><p data-i18n="step3_d"></p></li>
-          <li><h3 data-i18n="step4_t"></h3><p data-i18n="step4_d"></p></li>
+          <li class="reveal"><span class="step-ico"><svg class="ico" aria-hidden="true"><use href="#i-list"></use></svg></span><h3 data-i18n="step1_t"></h3><p data-i18n="step1_d"></p></li>
+          <li class="reveal"><span class="step-ico"><svg class="ico" aria-hidden="true"><use href="#i-quote"></use></svg></span><h3 data-i18n="step2_t"></h3><p data-i18n="step2_d"></p></li>
+          <li class="reveal"><span class="step-ico"><svg class="ico" aria-hidden="true"><use href="#i-card"></use></svg></span><h3 data-i18n="step3_t"></h3><p data-i18n="step3_d"></p></li>
+          <li class="reveal"><span class="step-ico"><svg class="ico" aria-hidden="true"><use href="#i-plane"></use></svg></span><h3 data-i18n="step4_t"></h3><p data-i18n="step4_d"></p></li>
         </ol>
-        <p class="note" data-i18n="export_note"></p>
+        <p class="note reveal"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><span data-i18n="export_note"></span></p>
       </div>
     </section>
 
-    <section id="order" class="section alt">
-      <div class="wrap">
-        <h2 data-i18n="order_title">Place an Order</h2>
-        <p class="sub" data-i18n="order_sub"></p>
+    <section id="order" class="section sand">
+      <div class="wrap order">
+        <aside class="order-aside">
+          <p class="eyebrow" data-i18n="eb_order">Order request</p>
+          <h2 data-i18n="order_title">Place an Order</h2>
+          <p class="sub" data-i18n="order_sub"></p>
+          <ul class="checks">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg><div><b data-i18n="step2_t"></b><span data-i18n="step2_d"></span></div></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg><div><b data-i18n="feat4_t"></b><span data-i18n="feat4_d"></span></div></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg><div><b data-i18n="feat3_t"></b><span data-i18n="feat3_d"></span></div></li>
+          </ul>
+        </aside>
 
-        <form id="order-form" novalidate>
+        <form id="order-form" class="order-form" novalidate>
           <div class="card">
-            <h3 data-i18n="cart_title">Your order list</h3>
+            <h3><span class="num">1</span><span data-i18n="cart_title">Your order list</span></h3>
             <p class="empty" id="cart-empty" data-i18n="cart_empty"></p>
             <table class="cart" id="cart-table" hidden>
               <thead><tr><th data-i18n="col_species"></th><th data-i18n="col_size"></th><th data-i18n="col_qty"></th><th></th></tr></thead>
               <tbody id="cart-body"></tbody>
             </table>
             <div class="add-row">
-              <select id="add-species"></select>
+              <select id="add-species" aria-label="Species"></select>
               <input id="add-other" type="text" data-i18n-attr="placeholder:other_species" hidden>
-              <button type="button" class="btn btn-small" id="add-btn" data-i18n="add">Add</button>
+              <button type="button" class="btn btn-dark btn-small" id="add-btn" data-i18n="add">Add</button>
             </div>
           </div>
 
           <div class="card">
-            <h3 data-i18n="details_title">Your details</h3>
+            <h3><span class="num">2</span><span data-i18n="details_title">Your details</span></h3>
             <div class="fields">
               <label><span><span data-i18n="f_company"></span> *</span><input name="company" required autocomplete="organization"></label>
               <label><span><span data-i18n="f_name"></span> *</span><input name="name" required autocomplete="name"></label>
@@ -117,24 +195,58 @@
               <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
             </div>
             <p class="form-msg" id="form-msg" role="status"></p>
-            <button type="submit" class="btn" id="submit-btn" data-i18n="submit">Send order request</button>
+            <button type="submit" class="btn btn-primary btn-block" id="submit-btn" data-i18n="submit">Send order request</button>
           </div>
         </form>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section contact-sec">
       <div class="wrap">
-        <h2 data-i18n="contact_title">Contact</h2>
-        <p class="sub" data-i18n="contact_sub"></p>
-        <dl class="contact" id="contact-list"></dl>
+        <div class="section-head center">
+          <div>
+            <p class="eyebrow" data-i18n="eb_contact">Get in touch</p>
+            <h2 data-i18n="contact_title">Contact</h2>
+            <p class="sub" data-i18n="contact_sub"></p>
+          </div>
+        </div>
+        <div class="contact" id="contact-list"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>© <span id="year"></span> LAWNCAM. <span data-i18n="footer_rights"></span></span>
+    <div class="wrap footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="#top" aria-label="LAWNCAM"><svg class="logo" aria-hidden="true"><use href="#logo"></use></svg><span class="brand-text"><b>LAWNCAM</b><small>Lake Malawi Cichlids</small></span></a>
+        <p data-i18n="footer_tag"></p>
+      </div>
+      <nav class="f-col">
+        <h4 data-i18n="footer_nav">Explore</h4>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#fish" data-i18n="nav_fish">Our Fish</a>
+        <a href="#export" data-i18n="nav_export">How We Export</a>
+        <a href="#order" data-i18n="nav_order">Place an Order</a>
+      </nav>
+      <div class="f-col">
+        <h4 data-i18n="eb_contact">Get in touch</h4>
+        <a id="footer-email" dir="ltr" href="#contact"></a>
+        <span id="footer-address"></span>
+      </div>
+      <nav class="f-col f-langs">
+        <h4 data-i18n="footer_langs">Languages</h4>
+        <a href="/" hreflang="en" lang="en">English</a>
+        <a href="/zh/" hreflang="zh" lang="zh">中文</a>
+        <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+        <a href="/pt/" hreflang="pt" lang="pt">Português</a>
+        <a href="/es/" hreflang="es" lang="es">Español</a>
+        <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+        <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+        <a href="/ar/" hreflang="ar" lang="ar">العربية</a>
+      </nav>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year">2026</span> LAWNCAM. <span data-i18n="footer_rights"></span></span>
       <a href="/credits.html" data-i18n="footer_credits">Photo credits</a>
     </div>
   </footer>

@@ -51,7 +51,8 @@ window.LAWNCAM_I18N = {
     required: "Required",
     contact_title: "Contact", contact_sub: "Questions about species, sizes or shipping? We are happy to help.",
     c_email: "Email", c_phone: "Phone", c_whatsapp: "WhatsApp", c_address: "Address",
-    footer_rights: "All rights reserved.", footer_credits: "Photo credits"
+    footer_rights: "All rights reserved.", footer_credits: "Photo credits",
+    eb_about: "Who we are", eb_fish: "Catalogue", eb_export: "Process", eb_order: "Order request", eb_contact: "Get in touch", footer_tag: "Lake Malawi cichlids, hand-collected and air-shipped worldwide.", footer_nav: "Explore", footer_langs: "Languages", origin: "Wild-collected in Lake Malawi"
   },
 
   zh: {
@@ -94,7 +95,8 @@ window.LAWNCAM_I18N = {
     required: "必填",
     contact_title: "联系我们", contact_sub: "关于品种、规格或运输有任何问题，欢迎咨询。",
     c_email: "邮箱", c_phone: "电话", c_whatsapp: "WhatsApp", c_address: "地址",
-    footer_rights: "版权所有。", footer_credits: "图片来源"
+    footer_rights: "版权所有。", footer_credits: "图片来源",
+    eb_about: "关于我们", eb_fish: "品种目录", eb_export: "出口流程", eb_order: "订单询价", eb_contact: "联系方式", footer_tag: "马拉维湖慈鲷，手工采集，空运全球。", footer_nav: "浏览", footer_langs: "语言", origin: "采自马拉维湖"
   },
 
   fr: {
@@ -137,7 +139,8 @@ window.LAWNCAM_I18N = {
     required: "Obligatoire",
     contact_title: "Contact", contact_sub: "Des questions sur les espèces, les tailles ou l'expédition ? Nous sommes là pour vous aider.",
     c_email: "E-mail", c_phone: "Téléphone", c_whatsapp: "WhatsApp", c_address: "Adresse",
-    footer_rights: "Tous droits réservés.", footer_credits: "Crédits photos"
+    footer_rights: "Tous droits réservés.", footer_credits: "Crédits photos",
+    eb_about: "Qui sommes-nous", eb_fish: "Catalogue", eb_export: "Processus", eb_order: "Demande de commande", eb_contact: "Nous contacter", footer_tag: "Cichlidés du lac Malawi, collectés à la main et expédiés par avion dans le monde entier.", footer_nav: "Explorer", footer_langs: "Langues", origin: "Collecté dans le lac Malawi"
   },
 
   pt: {
@@ -180,7 +183,8 @@ window.LAWNCAM_I18N = {
     required: "Obrigatório",
     contact_title: "Contato", contact_sub: "Dúvidas sobre espécies, tamanhos ou envio? Teremos prazer em ajudar.",
     c_email: "E-mail", c_phone: "Telefone", c_whatsapp: "WhatsApp", c_address: "Endereço",
-    footer_rights: "Todos os direitos reservados.", footer_credits: "Créditos das fotos"
+    footer_rights: "Todos os direitos reservados.", footer_credits: "Créditos das fotos",
+    eb_about: "Quem somos", eb_fish: "Catálogo", eb_export: "Processo", eb_order: "Pedido", eb_contact: "Fale conosco", footer_tag: "Ciclídeos do Lago Malawi, coletados à mão e enviados por via aérea para todo o mundo.", footer_nav: "Explorar", footer_langs: "Idiomas", origin: "Coletado no Lago Malawi"
   },
 
   es: {
@@ -223,7 +227,8 @@ window.LAWNCAM_I18N = {
     required: "Obligatorio",
     contact_title: "Contacto", contact_sub: "¿Preguntas sobre especies, tallas o envíos? Con gusto le ayudamos.",
     c_email: "Correo", c_phone: "Teléfono", c_whatsapp: "WhatsApp", c_address: "Dirección",
-    footer_rights: "Todos los derechos reservados.", footer_credits: "Créditos de fotos"
+    footer_rights: "Todos los derechos reservados.", footer_credits: "Créditos de fotos",
+    eb_about: "Quiénes somos", eb_fish: "Catálogo", eb_export: "Proceso", eb_order: "Solicitud de pedido", eb_contact: "Contáctenos", footer_tag: "Cíclidos del lago Malaui, recolectados a mano y enviados por avión a todo el mundo.", footer_nav: "Explorar", footer_langs: "Idiomas", origin: "Recolectado en el lago Malaui"
   },
 
   de: {
@@ -266,7 +271,8 @@ window.LAWNCAM_I18N = {
     required: "Pflichtfeld",
     contact_title: "Kontakt", contact_sub: "Fragen zu Arten, Größen oder Versand? Wir helfen gern.",
     c_email: "E-Mail", c_phone: "Telefon", c_whatsapp: "WhatsApp", c_address: "Adresse",
-    footer_rights: "Alle Rechte vorbehalten.", footer_credits: "Bildnachweise"
+    footer_rights: "Alle Rechte vorbehalten.", footer_credits: "Bildnachweise",
+    eb_about: "Wer wir sind", eb_fish: "Katalog", eb_export: "Ablauf", eb_order: "Bestellanfrage", eb_contact: "Kontakt", footer_tag: "Malawisee-Buntbarsche, von Hand gefangen und weltweit per Luftfracht versandt.", footer_nav: "Entdecken", footer_langs: "Sprachen", origin: "Gefangen im Malawisee"
   },
 
   ru: {
@@ -309,7 +315,8 @@ window.LAWNCAM_I18N = {
     required: "Обязательно",
     contact_title: "Контакты", contact_sub: "Вопросы о видах, размерах или доставке? Будем рады помочь.",
     c_email: "Эл. почта", c_phone: "Телефон", c_whatsapp: "WhatsApp", c_address: "Адрес",
-    footer_rights: "Все права защищены.", footer_credits: "Авторы фотографий"
+    footer_rights: "Все права защищены.", footer_credits: "Авторы фотографий",
+    eb_about: "О нас", eb_fish: "Каталог", eb_export: "Процесс", eb_order: "Заявка", eb_contact: "Связаться", footer_tag: "Цихлиды озера Малави: ручной отлов и авиадоставка по всему миру.", footer_nav: "Разделы", footer_langs: "Языки", origin: "Выловлено в озере Малави"
   },
 
   ar: {
@@ -352,6 +359,7 @@ window.LAWNCAM_I18N = {
     required: "مطلوب",
     contact_title: "اتصل بنا", contact_sub: "لديك أسئلة حول الأنواع أو الأحجام أو الشحن؟ يسعدنا مساعدتك.",
     c_email: "البريد الإلكتروني", c_phone: "الهاتف", c_whatsapp: "واتساب", c_address: "العنوان",
-    footer_rights: "جميع الحقوق محفوظة.", footer_credits: "مصادر الصور"
+    footer_rights: "جميع الحقوق محفوظة.", footer_credits: "مصادر الصور",
+    eb_about: "من نحن", eb_fish: "الكتالوج", eb_export: "المراحل", eb_order: "طلب عرض سعر", eb_contact: "تواصل معنا", footer_tag: "أسماك السيكليد من بحيرة ملاوي، تُجمع يدويًا وتُشحن جوًا إلى جميع أنحاء العالم.", footer_nav: "تصفح", footer_langs: "اللغات", origin: "من بحيرة ملاوي"
   }
 };

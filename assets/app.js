@@ -3,7 +3,6 @@
   var I18N = window.LAWNCAM_I18N;
   var LANGS = window.LAWNCAM_LANGS;
   var SPECIES = window.LAWNCAM_SPECIES;
-  var PHOTOS = window.LAWNCAM_PHOTOS;
   var lang = "en";
   var cart = [];
 
@@ -52,25 +51,16 @@
   // ---------- catalogue ----------
   var filter = "all";
   function renderFish() {
-    var grid = $("#fish-grid");
-    grid.innerHTML = "";
-    SPECIES.filter(function (s) { return filter === "all" || s.group === filter; }).forEach(function (s) {
-      var card = el("article", { "class": "fish" });
-      var img = el("img", { src: commonsImg(s.photo, 640), alt: s.trade + " (" + s.name + ")", loading: "lazy" });
-      img.onerror = function () { this.classList.add("broken"); };
-      var body = el("div", { "class": "fish-body" });
-      body.appendChild(el("h3", null, s.trade));
-      body.appendChild(el("p", { "class": "sci" }, s.name));
-      body.appendChild(el("p", { "class": "meta" }, t("adult_size") + ": " + s.size));
-      var inCart = cart.some(function (c) { return c.id === s.id; });
-      var b = el("button", { type: "button", "class": "btn btn-small" + (inCart ? " done" : "") }, inCart ? "✓ " + t("added") : t("add_to_order"));
-      b.onclick = function () { addItem(s.id); };
-      body.appendChild(b);
-      card.appendChild(img);
-      card.appendChild(body);
-      grid.appendChild(card);
-    });
+    var T = Object.assign({}, I18N.en, I18N[lang]);
+    $("#fish-grid").innerHTML = SPECIES.filter(function (s) { return filter === "all" || s.group === filter; }).map(function (s) {
+      return fishCardHTML(s, T, cart.some(function (c) { return c.id === s.id; }));
+    }).join("");
   }
+
+  $("#fish-grid").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-add]");
+    if (b) addItem(b.dataset.add);
+  });
 
   document.querySelectorAll(".filters button").forEach(function (b) {
     b.onclick = function () {
@@ -122,7 +112,7 @@
       qty.oninput = function () { item.qty = Math.max(1, parseInt(qty.value, 10) || 1); saveCart(); };
       tdQty.appendChild(qty);
       var tdRm = el("td");
-      var rm = el("button", { type: "button", "class": "link" }, t("remove"));
+      var rm = el("button", { type: "button", "class": "link-remove" }, t("remove"));
       rm.onclick = function () { cart.splice(i, 1); saveCart(); renderCart(); renderFish(); };
       tdRm.appendChild(rm);
       tr.appendChild(tdSize); tr.appendChild(tdQty); tr.appendChild(tdRm);
@@ -239,21 +229,54 @@
 
   // ---------- contact ----------
   function renderContact() {
-    var dl = $("#contact-list");
-    dl.innerHTML = "";
-    var add = function (key, val, href) {
+    var list = $("#contact-list");
+    list.innerHTML = "";
+    var add = function (key, icon, val, href) {
       if (!val) return;
-      var wrap = el("div");
-      wrap.appendChild(el("dt", { "data-i18n": key }, t(key)));
-      var dd = el("dd");
-      if (href) { var a = el("a", { href: href, dir: "ltr" }, val); dd.appendChild(a); } else dd.textContent = val;
-      wrap.appendChild(dd);
-      dl.appendChild(wrap);
+      var item = el(href ? "a" : "div", { "class": "c-item" });
+      if (href) item.setAttribute("href", href);
+      item.innerHTML = '<span class="c-ico"><svg class="ico" aria-hidden="true"><use href="#' + icon + '"></use></svg></span>';
+      item.appendChild(el("span", { "class": "c-label", "data-i18n": key }, t(key)));
+      item.appendChild(el("span", { "class": "c-val", dir: "ltr" }, val));
+      list.appendChild(item);
     };
-    add("c_email", CFG.email, "mailto:" + CFG.email);
-    add("c_phone", CFG.phone, "tel:" + (CFG.phone || "").replace(/\s/g, ""));
-    add("c_whatsapp", CFG.whatsapp && "+" + CFG.whatsapp, "https://wa.me/" + CFG.whatsapp);
-    add("c_address", CFG.address);
+    add("c_email", "i-mail", CFG.email, "mailto:" + CFG.email);
+    add("c_phone", "i-phone", CFG.phone, "tel:" + (CFG.phone || "").replace(/\s/g, ""));
+    add("c_whatsapp", "i-chat", CFG.whatsapp && "+" + CFG.whatsapp, "https://wa.me/" + CFG.whatsapp);
+    add("c_address", "i-pin", CFG.address);
+    var fe = $("#footer-email");
+    if (CFG.email) { fe.textContent = CFG.email; fe.href = "mailto:" + CFG.email; }
+    $("#footer-address").textContent = CFG.address || "";
+  }
+
+  // ---------- look and feel ----------
+  function fillPhotos() {
+    document.querySelectorAll("img[data-photo]").forEach(function (img) {
+      if (!img.getAttribute("src")) img.src = commonsImg(img.dataset.photo, +img.dataset.width || 900);
+    });
+  }
+
+  function fillMarquee() {
+    var track = $("#marquee");
+    if (track.children.length) return;
+    var html = SPECIES.map(function (s) { return "<span><i>" + s.name + "</i></span>"; }).join("");
+    track.innerHTML = html + html;
+  }
+
+  function watchHeader() {
+    var bar = $("#topbar");
+    var update = function () { bar.classList.toggle("scrolled", window.scrollY > 30); };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  }
+
+  function reveal() {
+    var items = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) { items.forEach(function (n) { n.classList.add("in"); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    items.forEach(function (n) { io.observe(n); });
   }
 
   // ---------- init ----------
@@ -262,13 +285,16 @@
   LANGS.forEach(function (l) { langSel.appendChild(el("option", { value: l.code }, l.label)); });
   langSel.onchange = function () { location.href = langPath(langSel.value) + location.hash; };
 
-  $("#hero-bg").style.backgroundImage = "url('" + commonsImg(PHOTOS.hero, 1600) + "')";
-  $("#about-img").src = commonsImg(PHOTOS.canoes, 900);
+  fillPhotos();
+  fillMarquee();
+  watchHeader();
+  reveal();
   $("#year").textContent = new Date().getFullYear();
 
   var menuBtn = $(".menu-btn");
   menuBtn.onclick = function () {
     var open = document.body.classList.toggle("menu-open");
+    $("#topbar").classList.toggle("scrolled", open || window.scrollY > 30);
     menuBtn.setAttribute("aria-expanded", open);
   };
   document.querySelectorAll(".nav a").forEach(function (a) { a.addEventListener("click", function () { document.body.classList.remove("menu-open"); }); });

@@ -29,3 +29,17 @@ window.commonsImg = function (file, width) {
 window.commonsPage = function (file) {
   return "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(file);
 };
+
+// One fish card as HTML, shared by the browser (assets/app.js) and the page builder (tools/build.js).
+window.fishCardHTML = function (s, t, inCart) {
+  var esc = function (v) { return String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); };
+  var group = String(t["filter_" + s.group] || "").replace(/\s*[(（].*[)）]\s*$/, "");
+  return '<article class="fish" data-group="' + s.group + '">' +
+    '<figure class="fish-media"><img src="' + esc(window.commonsImg(s.photo, 640)) + '" alt="' + esc(s.trade + " (" + s.name + ")") +
+    '" loading="lazy" width="640" height="480"><span class="tag">' + esc(group) + '</span></figure>' +
+    '<div class="fish-body"><h3>' + esc(s.trade) + '</h3><p class="sci">' + esc(s.name) + '</p>' +
+    '<p class="meta"><svg class="ico" aria-hidden="true"><use href="#i-ruler"></use></svg>' + esc(t.adult_size + ": " + s.size) + '</p>' +
+    '<button type="button" class="btn btn-card' + (inCart ? ' done' : '') + '" data-add="' + s.id + '">' +
+    (inCart ? '<svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>' + esc(t.added) : esc(t.add_to_order)) +
+    '</button></div></article>';
+};
