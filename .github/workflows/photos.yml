@@ -1,0 +1,28 @@
+name: Update photos
+
+# Downloads the Wikimedia Commons photos listed in assets/species.js into assets/photos/
+# (with author and licence) and commits them, so the site serves its own copies.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [assets/species.js, tools/fetch_photos.py]
+
+permissions:
+  contents: write
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download photos
+        run: python3 tools/fetch_photos.py
+      - name: Commit changes
+        run: |
+          git add assets/photos
+          if git diff --cached --quiet; then echo "No photo changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update photos from Wikimedia Commons"
+          git push

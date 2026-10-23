@@ -25,8 +25,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Download photos from Wikimedia Commons
-        run: python3 tools/fetch_photos.py
+      - name: Download photos if they are not committed yet
+        run: '[ -f assets/photos/manifest.js ] || python3 tools/fetch_photos.py'
       - name: Build language pages, sitemap and robots.txt
         run: node tools/build.js _site
       - uses: actions/configure-pages@v5
