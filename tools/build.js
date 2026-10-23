@@ -74,6 +74,7 @@ function render(code) {
     const cleaned = tagText.replace(new RegExp(`\\s${attr}="[^"]*"`), "");
     return cleaned.replace(/\s*\/?>$/, (end) => ` ${attr}="${esc(t[key] || "")}"${end}`);
   });
+  html = html.replace('<img id="about-img" alt="Lake Malawi"', `<img id="about-img" src="${esc(photo(ctx.window.LAWNCAM_PHOTOS.canoes, 900))}" alt="Canoes on Lake Malawi"`);
   html = html.replace('<div class="grid" id="fish-grid"></div>', `<div class="grid" id="fish-grid">\n${fishCards(t)}\n</div>`);
   const dir = code === "en" ? OUT : path.join(OUT, code);
   fs.mkdirSync(dir, { recursive: true });
