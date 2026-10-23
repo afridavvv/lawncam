@@ -62,10 +62,10 @@ h3 { font-size: 1.12rem; font-weight: 700; }
 .topbar-inner { display: flex; align-items: center; gap: 28px; height: 76px; transition: height .3s; }
 .topbar.scrolled .topbar-inner { height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; margin-inline-end: auto; }
-.logo { width: 46px; height: 46px; flex: none; padding: 3px; border-radius: 50%; background: #fff; object-fit: contain; box-shadow: 0 4px 12px rgba(0, 0, 0, .25); }
-.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
-.brand-text b { font-weight: 800; letter-spacing: .2em; font-size: 1.12rem; }
-.brand-text small { font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; opacity: .7; margin-top: 4px; white-space: nowrap; }
+.logo { width: 50px; height: 50px; flex: none; filter: drop-shadow(0 3px 8px rgba(0, 0, 0, .35)); }
+.brand-text { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.wordmark { display: block; height: 21px; width: auto; }
+.brand-text small { font-size: .56rem; letter-spacing: .13em; text-transform: uppercase; color: rgba(255, 255, 255, .72); white-space: nowrap; }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a { white-space: nowrap; font-size: .93rem; font-weight: 600; }
 .nav a:not(.btn) { color: rgba(255, 255, 255, .82); text-decoration: none; position: relative; padding-block: 6px; }
@@ -243,8 +243,11 @@ a.c-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); backgro
 /* ---------- footer ---------- */
 .footer { background: var(--ink); color: rgba(255, 255, 255, .72); padding-top: 72px; font-size: .93rem; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1.2fr 1fr; gap: 40px; padding-bottom: 56px; }
-.f-logo { display: inline-block; background: #fff; border-radius: 16px; padding: 12px 18px; margin-bottom: 20px; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .6); }
-.f-logo img { display: block; width: 180px; height: auto; }
+.f-brand .brand { margin-bottom: 22px; gap: 16px; }
+.f-brand .logo { width: 74px; height: 74px; }
+.f-brand .wordmark { height: 27px; }
+.f-brand .brand-text { gap: 8px; }
+.f-brand .brand-text small { font-size: .66rem; }
 .f-brand p { max-width: 320px; margin: 0; }
 .f-col { display: flex; flex-direction: column; gap: 10px; }
 .f-col h4 { color: #fff; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px; }
@@ -278,7 +281,7 @@ a.c-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); backgro
   .nav a:not(.btn)::after { display: none; }
   .nav .btn { margin-top: 16px; }
   .topbar-inner { gap: 10px; }
-  .brand-text small { display: none; }
+  .topbar .brand-text small { display: none; }
   .about { grid-template-columns: 1fr; }
   .order { grid-template-columns: 1fr; gap: 40px; }
   .order-aside { position: static; }
@@ -287,7 +290,10 @@ a.c-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); backgro
   body { font-size: 16px; }
   .wrap { width: min(1200px, 100% - 32px); }
   .section { padding-block: 76px; }
-  .logo { width: 40px; height: 40px; }
+  .logo { width: 42px; height: 42px; }
+  .wordmark { height: 16px; }
+  .f-brand .logo { width: 64px; height: 64px; }
+  .f-brand .wordmark { height: 23px; }
   .lang { padding: 0 10px; }
   .lang .ico { display: none; }
   .hero { min-height: 640px; }
