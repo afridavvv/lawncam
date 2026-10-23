@@ -67,7 +67,7 @@ def main():
             name = re.sub(r"[^A-Za-z0-9._-]", "_", os.path.splitext(file)[0]) + ext
             with open(os.path.join(OUT, name), "wb") as f:
                 f.write(get(meta["url"]))
-            manifest[file] = {"src": "assets/photos/" + name, **{k: meta[k] for k in ("author", "license", "licenseUrl", "page")}}
+            manifest[file] = {"src": "/assets/photos/" + name, **{k: meta[k] for k in ("author", "license", "licenseUrl", "page")}}
             print(f"ok   {file}  [{meta['license']}] {meta['author']}")
         except Exception as e:  # keep going; the site falls back to the Commons URL
             failed.append(file)

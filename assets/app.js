@@ -22,18 +22,19 @@
   }
 
   // ---------- language ----------
+  // Each language is its own pre-rendered page (/ for English, /zh/, /fr/ ...), built by tools/build.js.
+  function langPath(code) { return code === "en" ? "/" : "/" + code + "/"; }
+  function isLang(c) { return LANGS.some(function (l) { return l.code === c; }); }
+
   function pickLang() {
     var q = new URLSearchParams(location.search).get("lang");
-    var saved = store("lawncam_lang");
-    var ok = function (c) { return LANGS.some(function (l) { return l.code === c; }); };
-    if (q && ok(q)) return q;
-    if (saved && ok(saved)) return saved;
-    return "en";
+    var page = document.documentElement.lang;
+    if (q && isLang(q) && q !== page) { location.replace(langPath(q) + location.hash); }
+    return isLang(page) ? page : "en";
   }
 
   function applyLang(code) {
     lang = code;
-    store("lawncam_lang", code);
     var info = LANGS.filter(function (l) { return l.code === code; })[0];
     document.documentElement.lang = code;
     document.documentElement.dir = info.rtl ? "rtl" : "ltr";
@@ -43,9 +44,6 @@
       n.setAttribute(p[0], t(p[1]));
     });
     $("#lang").value = code;
-    var url = new URL(location.href);
-    url.searchParams.set("lang", code);
-    history.replaceState(null, "", url);
     renderFish();
     renderCart();
     renderSpeciesSelect();
@@ -262,7 +260,7 @@
   try { cart = JSON.parse(store("lawncam_cart") || "[]"); } catch (e) { cart = []; }
   var langSel = $("#lang");
   LANGS.forEach(function (l) { langSel.appendChild(el("option", { value: l.code }, l.label)); });
-  langSel.onchange = function () { applyLang(langSel.value); };
+  langSel.onchange = function () { location.href = langPath(langSel.value) + location.hash; };
 
   $("#hero-bg").style.backgroundImage = "url('" + commonsImg(PHOTOS.hero, 1600) + "')";
   $("#about-img").src = commonsImg(PHOTOS.canoes, 900);

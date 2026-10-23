@@ -10,6 +10,7 @@ Static website for LAWNCAM, a Lake Malawi ornamental fish exporter. English by d
 - `assets/i18n.js`: all text in 8 languages
 - `assets/species.js`: fish catalogue and photo file names (Wikimedia Commons)
 - `tools/fetch_photos.py`: downloads the photos plus author and licence into `assets/photos/`
+- `tools/build.js`: builds one pre-rendered page per language (`/`, `/zh/`, `/fr/` ...) with hreflang tags, plus `sitemap.xml` and `robots.txt`, for Google indexing
 - `.github/workflows/deploy.yml`: on every push to `main`, downloads the photos and publishes to GitHub Pages
 
 ## Orders
@@ -20,5 +21,6 @@ The order form emails each order through [Web3Forms](https://web3forms.com). Put
 
 ```
 python3 tools/fetch_photos.py   # optional
-python3 -m http.server 8000
+node tools/build.js _site
+cd _site && python3 -m http.server 8000
 ```

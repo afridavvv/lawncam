@@ -27,12 +27,8 @@ jobs:
           python-version: "3.12"
       - name: Download photos from Wikimedia Commons
         run: python3 tools/fetch_photos.py
-      - name: Prepare site
-        run: |
-          mkdir _site
-          cp -r index.html credits.html config.js assets _site/
-          [ -f CNAME ] && cp CNAME _site/ || true
-          touch _site/.nojekyll
+      - name: Build language pages, sitemap and robots.txt
+        run: node tools/build.js _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

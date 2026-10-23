@@ -12,7 +12,8 @@ window.LAWNCAM_LANGS = [
 
 window.LAWNCAM_I18N = {
   en: {
-    meta_desc: "LAWNCAM collects and exports Lake Malawi ornamental cichlids to aquarium importers and wholesalers worldwide.",
+    title: "LAWNCAM | Lake Malawi Cichlids Exporter – Wholesale Ornamental Fish from Malawi",
+    meta_desc: "LAWNCAM is a Malawi-based exporter of Lake Malawi cichlids (African cichlids): mbuna, peacocks and haps, hand-collected and air-shipped to aquarium importers and wholesalers worldwide.",
     nav_about: "About", nav_fish: "Our Fish", nav_export: "How We Export", nav_order: "Place an Order", nav_contact: "Contact",
     hero_kicker: "Malawi · Ornamental Fish Exporter",
     hero_title: "Living colour from Lake Malawi",
@@ -54,14 +55,15 @@ window.LAWNCAM_I18N = {
   },
 
   zh: {
-    meta_desc: "LAWNCAM 从马拉维湖捕捞观赏丽鱼，并出口给全球的水族进口商和批发商。",
+    title: "LAWNCAM | 马拉维湖慈鲷出口商 – 马拉维观赏鱼批发",
+    meta_desc: "LAWNCAM 从马拉维湖捕捞观赏慈鲷（非洲慈鲷），并出口给全球的水族进口商和批发商。",
     nav_about: "关于我们", nav_fish: "鱼类品种", nav_export: "出口流程", nav_order: "在线下单", nav_contact: "联系我们",
     hero_kicker: "马拉维 · 观赏鱼出口商",
     hero_title: "来自马拉维湖的鲜活色彩",
-    hero_sub: "LAWNCAM 负责马拉维湖丽鱼的捕捞、暂养和空运，供应全球的进口商、批发商和水族店。",
+    hero_sub: "LAWNCAM 负责马拉维湖慈鲷的捕捞、暂养和空运，供应全球的进口商、批发商和水族店。",
     hero_cta: "立即下单", hero_cta2: "查看鱼类",
     about_title: "关于 LAWNCAM",
-    about_p1: "LAWNCAM 是一家马拉维本土公司，专门从事马拉维湖观赏鱼的捕捞与出口。马拉维湖拥有数百种色彩艳丽、世界上独一无二的丽鱼。",
+    about_p1: "LAWNCAM 是一家马拉维本土公司，专门从事马拉维湖观赏鱼的捕捞与出口。马拉维湖拥有数百种色彩艳丽、世界上独一无二的慈鲷。",
     about_p2: "我们经验丰富的团队沿湖岸手工采集鱼只，在洁净的暂养池中养护，并精心准备每一批货，确保鱼只健康抵达、即可销售。",
     feat1_t: "手工采集", feat1_d: "由经验丰富的当地潜水员小心捕捞，绝不使用有害方法。",
     feat2_t: "出口前暂养", feat2_d: "每条鱼在包装前都会在我们的暂养场休养、喂食并检查。",
@@ -96,6 +98,7 @@ window.LAWNCAM_I18N = {
   },
 
   fr: {
+    title: "LAWNCAM | Exportateur de cichlidés du lac Malawi – Poissons d'ornement en gros",
     meta_desc: "LAWNCAM collecte et exporte des cichlidés d'ornement du lac Malawi vers les importateurs et grossistes du monde entier.",
     nav_about: "À propos", nav_fish: "Nos poissons", nav_export: "Exportation", nav_order: "Commander", nav_contact: "Contact",
     hero_kicker: "Malawi · Exportateur de poissons d'ornement",
@@ -138,6 +141,7 @@ window.LAWNCAM_I18N = {
   },
 
   pt: {
+    title: "LAWNCAM | Exportador de ciclídeos do Lago Malawi – Peixes ornamentais no atacado",
     meta_desc: "A LAWNCAM coleta e exporta ciclídeos ornamentais do Lago Malawi para importadores e atacadistas de todo o mundo.",
     nav_about: "Sobre", nav_fish: "Nossos peixes", nav_export: "Exportação", nav_order: "Fazer pedido", nav_contact: "Contato",
     hero_kicker: "Malawi · Exportador de peixes ornamentais",
@@ -180,6 +184,7 @@ window.LAWNCAM_I18N = {
   },
 
   es: {
+    title: "LAWNCAM | Exportador de cíclidos del lago Malaui – Peces ornamentales al por mayor",
     meta_desc: "LAWNCAM recolecta y exporta cíclidos ornamentales del lago Malaui a importadores y mayoristas de todo el mundo.",
     nav_about: "Nosotros", nav_fish: "Nuestros peces", nav_export: "Exportación", nav_order: "Hacer pedido", nav_contact: "Contacto",
     hero_kicker: "Malaui · Exportador de peces ornamentales",
@@ -222,6 +227,7 @@ window.LAWNCAM_I18N = {
   },
 
   de: {
+    title: "LAWNCAM | Malawisee-Buntbarsche Exporteur – Zierfische im Großhandel aus Malawi",
     meta_desc: "LAWNCAM fängt und exportiert Zierbuntbarsche aus dem Malawisee an Aquarienimporteure und Großhändler weltweit.",
     nav_about: "Über uns", nav_fish: "Unsere Fische", nav_export: "Export", nav_order: "Bestellen", nav_contact: "Kontakt",
     hero_kicker: "Malawi · Zierfisch-Exporteur",
@@ -264,6 +270,7 @@ window.LAWNCAM_I18N = {
   },
 
   ru: {
+    title: "LAWNCAM | Экспортёр цихлид озера Малави – оптовые поставки декоративных рыб",
     meta_desc: "LAWNCAM вылавливает и экспортирует декоративных цихлид озера Малави импортёрам и оптовикам по всему миру.",
     nav_about: "О нас", nav_fish: "Наши рыбы", nav_export: "Экспорт", nav_order: "Заказать", nav_contact: "Контакты",
     hero_kicker: "Малави · Экспортёр декоративных рыб",
@@ -306,6 +313,7 @@ window.LAWNCAM_I18N = {
   },
 
   ar: {
+    title: "LAWNCAM | مُصدِّر أسماك السيكليد من بحيرة ملاوي – أسماك الزينة بالجملة",
     meta_desc: "تقوم LAWNCAM بجمع وتصدير أسماك البلطي الزينة من بحيرة ملاوي إلى المستوردين وتجار الجملة حول العالم.",
     nav_about: "من نحن", nav_fish: "أسماكنا", nav_export: "التصدير", nav_order: "اطلب الآن", nav_contact: "اتصل بنا",
     hero_kicker: "ملاوي · مُصدِّر أسماك الزينة",
