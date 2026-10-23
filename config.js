@@ -6,7 +6,7 @@ window.LAWNCAM_CONFIG = {
 
   // Shown on the Contact section and used as the fallback when no key is set
   // (the buyer's own mail app opens with the order filled in).
-  email: "orders@example.com",
+  email: "reception@lawncammw.com",
 
   // Optional WhatsApp number in international format, digits only, e.g. "265991234567".
   whatsapp: "",
