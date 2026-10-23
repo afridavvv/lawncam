@@ -60,10 +60,12 @@ h3 { font-size: 1.12rem; font-weight: 700; }
 /* solid white bar so the logo keeps its original colours; only a soft shadow fades in on scroll */
 .topbar { position: fixed; inset-inline: 0; top: 0; z-index: 50; color: var(--ink); background: #fff; box-shadow: 0 1px 0 rgba(10, 31, 46, .08); transition: box-shadow .35s var(--ease); }
 .topbar.scrolled { box-shadow: 0 1px 0 rgba(10, 31, 46, .06), 0 14px 34px -22px rgba(10, 31, 46, .5); }
-.topbar-inner { display: flex; align-items: center; gap: 28px; height: 104px; }
-.brand { display: inline-flex; align-items: center; color: inherit; text-decoration: none; margin-inline-end: auto; }
-/* the logo is the original artwork with its white background removed; only its size changes per placement */
-.logo { display: block; height: 92px; width: auto; }
+.topbar-inner { display: flex; align-items: center; gap: 28px; height: 84px; }
+.brand { display: inline-flex; align-items: center; gap: 14px; color: inherit; text-decoration: none; margin-inline-end: auto; }
+/* header: the logo's mark and its wordmark block, cut out of the original artwork and laid side by side; footer: the whole logo */
+.logo-mark { display: block; height: 60px; width: auto; }
+.logo-text { display: block; height: 46px; width: auto; }
+.logo { display: block; height: 190px; width: auto; }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a { white-space: nowrap; font-size: .93rem; font-weight: 600; }
 .nav a:not(.btn) { color: rgba(10, 31, 46, .78); text-decoration: none; position: relative; padding-block: 6px; transition: color .2s; }
@@ -242,7 +244,6 @@ a.c-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); backgro
 .footer { background: var(--sand); color: rgba(10, 31, 46, .74); border-top: 1px solid rgba(10, 31, 46, .08); padding-top: 72px; font-size: .93rem; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1.2fr 1fr; gap: 40px; padding-bottom: 56px; }
 .f-brand .brand { margin-bottom: 20px; }
-.f-brand .logo { height: 190px; }
 .f-brand p { max-width: 320px; margin: 0; }
 .f-col { display: flex; flex-direction: column; gap: 10px; }
 .f-col h4 { color: var(--ink); font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px; }
@@ -260,6 +261,10 @@ a.c-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); backgro
 
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {
+  .topbar-inner { gap: 18px; }
+  .nav { gap: 20px; }
+  .logo-mark { height: 50px; }
+  .logo-text { height: 33px; }
   .hero-grid { grid-template-columns: 1fr; padding-block: 130px 140px; }
   .hero-cards { display: none; }
   .features { grid-template-columns: repeat(2, 1fr); }
@@ -275,9 +280,9 @@ a.c-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); backgro
   .nav a:not(.btn) { padding: 14px 4px; border-bottom: 1px solid rgba(10, 31, 46, .08); }
   .nav a:not(.btn)::after { display: none; }
   .nav .btn { margin-top: 16px; }
-  .topbar-inner { gap: 10px; }
-  .topbar-inner { height: 80px; }
-  .logo { height: 68px; }
+  .topbar-inner { gap: 10px; height: 76px; }
+  .logo-mark { height: 50px; }
+  .logo-text { height: 38px; }
   .about { grid-template-columns: 1fr; }
   .order { grid-template-columns: 1fr; gap: 40px; }
   .order-aside { position: static; }
@@ -286,9 +291,11 @@ a.c-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); backgro
   body { font-size: 16px; }
   .wrap { width: min(1200px, 100% - 32px); }
   .section { padding-block: 76px; }
-  .topbar-inner { height: 72px; }
-  .logo { height: 62px; }
-  .f-brand .logo { height: 150px; }
+  .topbar-inner { height: 68px; }
+  .brand { gap: 10px; }
+  .logo-mark { height: 42px; }
+  .logo-text { height: 28px; }
+  .logo { height: 150px; }
   .lang { padding: 0 10px; }
   .lang .ico { display: none; }
   .hero { min-height: 640px; }
