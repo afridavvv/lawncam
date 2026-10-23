@@ -1,0 +1,26 @@
+name: Check domain
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Redirect chain
+        run: |
+          for u in http://lawncammw.com/ https://lawncammw.com/ http://www.lawncammw.com/ https://www.lawncammw.com/; do
+            echo "=== $u"
+            curl -sS -o /dev/null --max-time 20 -w '%{http_code} -> %{redirect_url}\n' "$u" || true
+          done
+          echo "=== full chain from http://lawncammw.com/"
+          curl -sSIL --max-time 30 http://lawncammw.com/ | grep -iE '^(HTTP|location|server)' || true
+          echo "=== full chain from https://www.lawncammw.com/"
+          curl -sSIL --max-time 30 https://www.lawncammw.com/ | grep -iE '^(HTTP|location|server)' || true
+      - name: Certificates
+        run: |
+          for h in www.lawncammw.com lawncammw.com; do
+            echo "=== $h"
+            echo | openssl s_client -servername "$h" -connect "$h:443" 2>/dev/null \
+              | openssl x509 -noout -subject -issuer -dates -ext subjectAltName || true
+          done
