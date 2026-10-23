@@ -41,6 +41,13 @@ window.LAWNCAM_LOCAL_PHOTOS = {
   "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
   "page": "https://commons.wikimedia.org/wiki/File:Electric_Yellow_Lab_Cichlid.jpg"
  },
+ "Frankfurt_Zoo_-_Electric_Yellow_Lab_1.jpg": {
+  "src": "/assets/photos/Frankfurt_Zoo_-_Electric_Yellow_Lab_1.jpg",
+  "author": "Photograph by Mike Peel (www.mikepeel.net).",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Frankfurt_Zoo_-_Electric_Yellow_Lab_1.jpg"
+ },
  "Fryeri6.jpg": {
   "src": "/assets/photos/Fryeri6.jpg",
   "author": "The original uploader was Ged 02 at English Wikipedia.",
