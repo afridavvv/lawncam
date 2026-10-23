@@ -1,0 +1,17 @@
+name: Hero candidates
+on:
+  push:
+    branches: [hero-candidates]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/hero_candidates.py
+      - run: |
+          git add candidates
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Hero candidate previews" && git push
