@@ -15,7 +15,7 @@ window.LAWNCAM_SPECIES = [
 ];
 
 window.LAWNCAM_PHOTOS = {
-  hero: "Cichlids-of-Lake-Malawi.jpg",
+  hero: "Frankfurt_Zoo_-_Electric_Yellow_Lab_1.jpg",
   canoes: "Canoes_on_Lake_Malawi.jpg"
 };
 

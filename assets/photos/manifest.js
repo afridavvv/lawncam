@@ -27,13 +27,6 @@ window.LAWNCAM_LOCAL_PHOTOS = {
   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Canoes_on_Lake_Malawi.jpg"
  },
- "Cichlids-of-Lake-Malawi.jpg": {
-  "src": "/assets/photos/Cichlids-of-Lake-Malawi.jpg",
-  "author": "w:User:Pburka",
-  "license": "Public domain",
-  "licenseUrl": "",
-  "page": "https://commons.wikimedia.org/wiki/File:Cichlids-of-Lake-Malawi.jpg"
- },
  "Copadichromis_borleyi2.jpg": {
   "src": "/assets/photos/Copadichromis_borleyi2.jpg",
   "author": "The original uploader was MidgleyDJ at English Wikipedia.",

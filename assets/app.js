@@ -156,7 +156,7 @@
     var lines = [
       "New order request " + ref,
       "",
-      "Company: " + f.company,
+      "Company: " + (f.company || "-"),
       "Contact: " + f.name,
       "Email: " + f.email,
       "Phone/WhatsApp: " + (f.phone || "-"),
@@ -187,7 +187,7 @@
     ["company", "name", "email", "phone", "country", "airport", "date", "notes"].forEach(function (k) { f[k] = form[k].value.trim(); });
     var ref = orderRef();
     var text = orderText(ref, f);
-    var subject = "LAWNCAM order " + ref + " - " + f.company + " (" + f.country + ")";
+    var subject = "LAWNCAM order " + ref + " - " + (f.company || f.name) + " (" + f.country + ")";
     var done = function () {
       msg.textContent = t("success").replace("{ref}", ref);
       msg.classList.add("ok");

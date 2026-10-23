@@ -61,7 +61,7 @@ window.LAWNCAM_I18N = {
     nav_about: "关于我们", nav_fish: "鱼类品种", nav_export: "出口流程", nav_order: "在线下单", nav_contact: "联系我们",
     hero_kicker: "马拉维 · 观赏鱼出口商",
     hero_title: "来自马拉维湖的鲜活色彩",
-    hero_sub: "LAWNCAM 负责马拉维湖慈鲷的捕捞、暂养和空运，供应全球的进口商、批发商和水族店。",
+    hero_sub: "LAWNCAM 负责马拉维湖慈鲷的捕捞、暂养和空运，供应全球的进口商、批发商和水族爱好者。",
     hero_cta: "立即下单", hero_cta2: "查看鱼类",
     about_title: "关于 LAWNCAM",
     about_p1: "LAWNCAM 是一家马拉维本土公司，专门从事马拉维湖观赏鱼的捕捞与出口。马拉维湖拥有数百种色彩艳丽、世界上独一无二的慈鲷。",

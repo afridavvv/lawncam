@@ -32,9 +32,9 @@ function seoHead(code, t) {
     "@type": "Organization",
     name: "LAWNCAM",
     url: SITE + "/",
-    logo: SITE + "/assets/favicon.svg",
+    logo: SITE + "/assets/logo.jpg",
     description: I18N.en.meta_desc,
-    address: { "@type": "PostalAddress", addressLocality: "Lilongwe", addressCountry: "MW" },
+    address: { "@type": "PostalAddress", addressLocality: "Salima", addressCountry: "MW" },
     areaServed: "Worldwide",
     knowsAbout: ["Lake Malawi cichlids", "African cichlids", "Ornamental fish export", "Mbuna", "Aulonocara peacock cichlids"],
   };

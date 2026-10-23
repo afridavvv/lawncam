@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets", "photos")
 API = "https://commons.wikimedia.org/w/api.php"
 UA = "LAWNCAM-website-photo-fetch/1.0 (https://github.com/afridavvv/lawncam)"
-WIDE = {"Cichlids-of-Lake-Malawi.jpg": 1600}
+WIDE = {"Frankfurt_Zoo_-_Electric_Yellow_Lab_1.jpg": 2200}
 
 
 def site_photos():

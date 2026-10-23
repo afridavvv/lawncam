@@ -12,5 +12,5 @@ window.LAWNCAM_CONFIG = {
   whatsapp: "",
 
   phone: "",
-  address: "Lilongwe, Malawi"
+  address: "Salima, Malawi"
 };

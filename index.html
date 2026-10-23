@@ -7,7 +7,9 @@
   <meta name="description" data-i18n-attr="content:meta_desc" content="">
   <meta name="theme-color" content="#0a1f2e">
   <!--SEO-->
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
@@ -17,9 +19,7 @@
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <linearGradient id="g-sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd25a"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
     </defs>
-    <symbol id="logo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0e3a52"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#19a7b8" stroke-opacity=".5"/><path d="M8 25c4.5-7.5 14-11 23-7.4l7.2-5.4-1.9 10.1 1.9 10.1-7.2-5.4C22 30.6 12.5 32.4 8 25z" fill="url(#g-sun)"/><path d="M17 17.6c3-3.6 8-5 12-3.2l-2 3.4M19.5 19.2v11.6M24 18.2v13.4M28.5 19v11.8" stroke="#0a1f2e" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="13" cy="23.4" r="1.7" fill="#0a1f2e"/></symbol>
     <symbol id="i-fish" viewBox="0 0 24 24"><path d="M7 12c2.4-3.9 5.8-5.5 8.8-5.5 2.9 0 5 2.4 6.2 5.5-1.2 3.1-3.3 5.5-6.2 5.5-3 0-6.4-1.6-8.8-5.5z"/><path d="M7 12 2.5 8v8L7 12z"/><path d="M13 8.5c-.8 2.3-.8 4.7 0 7"/><circle cx="18" cy="11.2" r=".9" fill="currentColor"/></symbol>
     <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c4 5 6.5 8.3 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 11.3 8 8 12 3z"/><path d="M9 15a3 3 0 0 0 3 3"/></symbol>
     <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21.5 2.5 10.5 13.5M21.5 2.5l-7 19-4-8-8-4 19-7z"/></symbol>
@@ -41,8 +41,8 @@
   <header class="topbar" id="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="#top" aria-label="LAWNCAM">
-        <svg class="logo" aria-hidden="true"><use href="#logo"></use></svg>
-        <span class="brand-text"><b>LAWNCAM</b><small>Lake Malawi Cichlids</small></span>
+        <img class="logo" src="/assets/logo-mark.png" alt="" width="320" height="320">
+        <span class="brand-text"><b>LAWNCAM</b><small>Ornamental Fish Catching &amp; Export</small></span>
       </a>
       <nav class="nav" id="nav">
         <a href="#about" data-i18n="nav_about">About</a>
@@ -61,7 +61,7 @@
 
   <main id="top">
     <section class="hero">
-      <img class="hero-img" data-photo="Cichlids-of-Lake-Malawi.jpg" data-width="1600" alt="" fetchpriority="high">
+      <img class="hero-img" data-photo="Frankfurt_Zoo_-_Electric_Yellow_Lab_1.jpg" data-width="2200" alt="" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
@@ -184,7 +184,7 @@
           <div class="card">
             <h3><span class="num">2</span><span data-i18n="details_title">Your details</span></h3>
             <div class="fields">
-              <label><span><span data-i18n="f_company"></span> *</span><input name="company" required autocomplete="organization"></label>
+              <label><span data-i18n="f_company"></span><input name="company" autocomplete="organization"></label>
               <label><span><span data-i18n="f_name"></span> *</span><input name="name" required autocomplete="name"></label>
               <label><span><span data-i18n="f_email"></span> *</span><input name="email" type="email" required autocomplete="email"></label>
               <label><span data-i18n="f_phone"></span><input name="phone" type="tel" autocomplete="tel"></label>
@@ -218,7 +218,7 @@
   <footer class="footer">
     <div class="wrap footer-grid">
       <div class="f-brand">
-        <a class="brand" href="#top" aria-label="LAWNCAM"><svg class="logo" aria-hidden="true"><use href="#logo"></use></svg><span class="brand-text"><b>LAWNCAM</b><small>Lake Malawi Cichlids</small></span></a>
+        <a class="f-logo" href="#top"><img src="/assets/logo.jpg" alt="LAWNCAM – Ornamental Fish Catching &amp; Export" width="1009" height="802"></a>
         <p data-i18n="footer_tag"></p>
       </div>
       <nav class="f-col">
